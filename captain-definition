@@ -1,16 +1,4 @@
 {
     "schemaVersion": 2,
-    "dockerfileLines":[
-    
-"FROM node:16.15.1-alpine As build",
-"WORKDIR /app",
-"COPY package*.json ./",
-"RUN npm install",
-"COPY . .",
-"RUN npm run build",
-"FROM ngix:1.19.0-alpine AS prod-stage",
-"COPY --from=build /app/dist/usr/share/nginx/html",
-"EXPOSE 80",
-"CMD ['nginx','-g','daemon off;']"
-]
+    "dockerfile": "DockerFile"
 }
