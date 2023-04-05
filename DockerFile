@@ -1,13 +1,12 @@
 #STEP 1:BUILD VUE Project
-FROM node:16.15.1-alpine As build
+FROM node:lts-alpine
+RUN npm install -g http-server
+RUN mkdir /app
 WORKDIR /app
-COPY package.json ./
+COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
 
-#STEP 2: CREATE NGINX SERVER
-FROM ngix:1.19.0-alpine AS prod-stage
-COPY --from=build /app/dist/usr/share/nginx/html
 EXPOSE 80
-CMD ["nginx","-g","daemon off;"]
+CMD [ "http-server", "dist" ]
