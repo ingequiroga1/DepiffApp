@@ -36,7 +36,7 @@ export default {
 <style>
 #hero
 {
-  background: red;
+
   width: 100%;
   height: 100vh;
 }
