@@ -1,57 +1,103 @@
 <template>
-  <NavBar @goToSeccion = "moveToSection($event)"/>
-  <div id="hero" class="col-md-12 fazul text-center">
-      <img src="../assets/images/LOGODEPIFF.png">
-      <h1 style="font-size: 5em; padding-top: 15%; padding-bottom:15%">Depiff</h1>
-  </div>
-  <div id="nosotros"></div>
-  <div id="acerca"></div>
+  <v-app>
+    <NavBar :color="color" :flat="flat"/>
+    <v-main class="pt-0">
+      <home-section/>
+      <AboutSection />
+      <DownloadSection />
+      <PricingSection />
+      <ContactSection />
+    </v-main>
+    <v-scale-transition>
+      <v-btn
+        fab
+        v-show="fab"
+        v-scroll="onScroll"
+        dark
+        fixed
+        bottom
+        right
+        color="secondary"
+        @click="toTop"
+      >
+        <v-icon>mdi-arrow-up</v-icon>
+      </v-btn>
+    </v-scale-transition>
+    <FooterVue />
+  </v-app>
 </template>
 
+<style scoped>
+.v-main {
+  background-image: url("~@/assets/img/bgMain.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+</style>
 
 <script>
-// @ is an alias to /src
-//import HelloWorld from '@/components/HelloWorld.vue'
-import NavBar from '@/components/NavBar.vue'
+  import NavBar from '../components/NavBar'
+  import HomeSection from '@/components/HomeSection.vue';
+  import FooterVue from '@/components/FooterVue.vue';
+  import AboutSection from '@/components/AboutSection.vue';
+  import DownloadSection from '@/components/DownloadSection.vue';
+  import PricingSection from '@/components/PricingSection.vue';
+  import ContactSection from '@/components/ContactSection.vue';
 
-export default {
-  name: 'HomeView',
-  methods:{
-    moveToSection(event){
-     // console.log(event);
-       let element = document.getElementById(event)
-       let x = element.offsetLeft;
-       let y = element.offsetTop;
 
-       window.scrollTo(x,y);
+  export default {
+    name: 'HomeComponent',
+
+    components: {
+      NavBar,
+      HomeSection,
+      FooterVue,
+      AboutSection,
+      DownloadSection,
+      PricingSection,
+      ContactSection
+
+    },
+
+    data: () => ({
+    fab: null,
+    color: "",
+    flat: null,
+  }),
+
+  created() {
+    const top = window.pageYOffset || 0;
+    if (top <= 60) {
+      this.color = "transparent";
+      this.flat = true;
     }
   },
-  components: {
-   // HelloWorld,
-    NavBar
+
+  watch: {
+    fab(value) {
+      if (value) {
+        this.color = "secondary";
+        this.flat = false;
+      } else {
+        this.color = "transparent";
+        this.flat = true;
+      }
+    },
+  },
+
+  methods: {
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 60;
+    },
+    toTop() {
+      this.$vuetify.goTo(0);
+    },
+  },
+
   }
-}
 </script>
 
-<style>
-#hero
-{
 
-  width: 100%;
-  height: 100vh;
-}
-
-#nosotros
-{
-  background: yellow;
-  width: 100%;
-  height: 100vh;
-}
-#acerca
-{
-  background: blue;
-  width: 100%;
-  height: 100vh;
-}
-
-</style>

@@ -1,4 +1,4 @@
-# depiffweb
+# web-depiff
 
 ## Project setup
 ```
