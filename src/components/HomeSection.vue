@@ -104,6 +104,8 @@
                     max-width="100px"
                     class="d-block ml-auto mr-auto"
                     :class="{ 'zoom-efect': hover }"
+                    @click="enviarSeguros()"
+                    
                   ></v-img>
                   <h1 class="font-weight-regular">{{ feature.title }}</h1>
                   <h4 class="font-weight-regular subtitle-1">
@@ -116,15 +118,6 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-dialog v-model="dialog" max-width="640px">
-      <v-card>
-        <youtube
-          :video-id="videoId"
-          @ready="ready"
-          @playing="playing"
-        ></youtube>
-      </v-card>
-    </v-dialog>
     <div class="svg-border-waves">
       <img src="~@/assets/img/wave2.svg" />
     </div>
@@ -143,16 +136,16 @@ export default {
           title: "Seguros",
           text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
-        {
-          img: require("@/assets/img/icon1.png"),
-          title: "Afores",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        },
-        {
-          img: require("@/assets/img/icon3.png"),
-          title: "Inmuebles",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        },
+        // {
+        //   img: require("@/assets/img/icon1.png"),
+        //   title: "Afores",
+        //   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        // },
+        // {
+        //   img: require("@/assets/img/icon3.png"),
+        //   title: "Inmuebles",
+        //   text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        // },
       ],
     };
   },
@@ -184,6 +177,9 @@ export default {
     pause() {
       this.player.pauseVideo();
     },
+    enviarSeguros(){
+      this.$router.push('/seguros')
+    }
   },
 };
 </script>

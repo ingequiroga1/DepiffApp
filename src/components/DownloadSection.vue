@@ -5,7 +5,7 @@
           <v-col cols="10">
             <v-row align="center" justify="center">
               <v-col sm="4" class="hidden-xs-only"> logodepiff
-                <v-img src="@/assets/img/DEPIFF.png" class="d-block ml-auto mr-auto" max-width="350px" />
+                <v-img src="@/assets/img/logodepiffnew.png" class="d-block ml-auto mr-auto" max-width="350px" />
               </v-col>
               <v-col cols="12" sm="8" class="white--text text-left">
                 <h1>Despacho profecional de <br> <span style="color: #ffc107; font-size: 2.1em">INVERSIONES</span><br>financieras para el futuro</h1>

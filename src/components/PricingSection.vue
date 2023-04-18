@@ -13,19 +13,15 @@
                       <div class="flex-center">
                         <div class="circle1">
                           <div class="circle2">
-                            <v-img src="~@/assets/img/paperplane.svg"></v-img>
+                            <v-img src="~@/assets/img/human.svg"></v-img>
                           </div>
                         </div>
                       </div>
-                      <div class="text--disabled text-uppercase text-h5 my-2">Básico</div>
+                      <div class="text--disabled text-uppercase text-h5 my-2">Créditos personales</div>
                       <v-divider class="my-2"/>
-                      <div class="text-uppercase blue--text">Domínios personalizados</div>
+                      <div class="text-uppercase blue--text">Crédito personal para empleados</div>
                       <v-divider class="my-2"/>
-                      <div class="text-uppercase blue--text">Limite de 1000 acessos diários</div>
-                      <v-divider class="my-2"/>
-                      <div class="text-uppercase blue--text">Outras características...</div>
-                      <v-divider class="my-2"/>
-                      <div class="text-uppercase text-h4 mt-6 blue--text">R$ 20,00</div>
+                      <div class="text-uppercase blue--text">Crédito dejando en garantia tu vehículo</div>
                       <v-btn
                           v-bind="size"
                           rounded
@@ -33,7 +29,7 @@
                           color="blue"
                           class="mt-6"
                       >
-                        Comece Agora!
+                        SABER MÁS
                       </v-btn>
                     </v-card-text>
                     <v-divider style="margin-right: -23px" vertical v-if="this.$vuetify.breakpoint.smAndUp"></v-divider>
@@ -46,19 +42,21 @@
                       <div class="flex-center">
                         <div class="circle1">
                           <div class="circle2">
-                            <v-img src="~@/assets/img/airplane.svg"/>
+                            <v-img src="~@/assets/img/house.svg"/>
                           </div>
                         </div>
                       </div>
-                      <div class="text--disabled text-uppercase text-h5 my-2">Padrão</div>
+                      <div class="text--disabled text-uppercase text-h5 my-2">Créditos hipotecarios</div>
                       <v-divider class="my-2"/>
-                      <div class="text-uppercase blue--text">Domínios personalizados</div>
+                      <div class="text-uppercase blue--text">Quieres comprar una casa o terreno?</div>
                       <v-divider class="my-2"/>
-                      <div class="text-uppercase blue--text">Limite de 10000 acessos diários</div>
+                      <div class="text-uppercase blue--text">Tienes un terreno y necesitas dinero para construir?</div>
                       <v-divider class="my-2"/>
-                      <div class="text-uppercase blue--text">Outras características...</div>
+                      <div class="text-uppercase blue--text">Quieres cambiar el crédito de quien te vende a tu nombre?</div>
                       <v-divider class="my-2"/>
-                      <div class="text-uppercase text-h4 mt-6 blue--text">R$ 100,00</div>
+                      <div class="text-uppercase blue--text">Quieres una sustitución de hipoteca para mejora de condiciones?</div>
+                      <v-divider class="my-2"/>
+                      <div class="text-uppercase blue--text">Necesitas un crédito de liquidez?</div>
                       <v-btn
                           v-bind="size"
                           rounded
@@ -66,7 +64,7 @@
                           color="blue"
                           class="mt-6"
                       >
-                        Comece Agora!
+                      SABER MÁS
                       </v-btn>
                     </v-card-text>
                     <v-divider style="margin-right: -23px" vertical v-if="this.$vuetify.breakpoint.mdAndUp"></v-divider>
@@ -75,25 +73,20 @@
                 </v-col>
                 <v-col class="col-12 col-md-4">
                   <v-divider v-if="this.$vuetify.breakpoint.smOnly" class="mx-4"></v-divider>
-  
                   <div class="flex-center">
                     <v-card-text>
                       <div class="flex-center">
                         <div class="circle1">
                           <div class="circle2">
-                            <v-img src="~@/assets/img/aeroplane.svg"/>
+                            <v-img src="~@/assets/img/car.svg"/>
                           </div>
                         </div>
                       </div>
-                      <div class="text--disabled text-uppercase text-h5 my-2">Empresarial</div>
+                      <div class="text--disabled text-uppercase text-h5 my-2">Créditos para automóviles</div>
                       <v-divider class="my-2"/>
-                      <div class="text-uppercase blue--text">Domínios personalizados</div>
+                      <div class="text-uppercase blue--text">Quieres comprar un vehículo nuevo?</div>
                       <v-divider class="my-2"/>
-                      <div class="text-uppercase blue--text">Acessos ilimitados</div>
-                      <v-divider class="my-2"/>
-                      <div class="text-uppercase blue--text">Outras características...</div>
-                      <v-divider class="my-2"/>
-                      <div class="text-uppercase text-h4 mt-6 blue--text">R$ 500,00</div>
+                      <div class="text-uppercase blue--text">Quieres comprar un vehículo usado?</div>  
                       <v-btn
                           v-bind="size"
                           rounded
@@ -101,11 +94,104 @@
                           color="blue"
                           class="mt-6"
                       >
-                        Comece Agora!
+                        SABER MÁS
                       </v-btn>
                     </v-card-text>
                   </div>
                 </v-col>
+              </v-row>
+              <v-row class="text-center">
+                <v-col class="col-12 col-md-4">
+                  <v-divider v-if="this.$vuetify.breakpoint.smOnly" class="mx-4"></v-divider>
+  
+                  <div class="flex-center">
+                    <v-card-text>
+                      <div class="flex-center">
+                        <div class="circle1">
+                          <div class="circle2">
+                            <v-img src="~@/assets/img/company.svg"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text--disabled text-uppercase text-h5 my-2">Crédito PYME y empresarial</div>
+                      <v-divider class="my-2"/>
+                      <div class="text-uppercase blue--text">Domínios personalizados</div>
+                      <v-divider class="my-2"/>
+                      <div class="text-uppercase blue--text">Acessos ilimitados</div>
+                    
+                      <v-btn
+                          v-bind="size"
+                          rounded
+                          outlined
+                          color="blue"
+                          class="mt-6"
+                      >
+                        SABER MÁS
+                      </v-btn>
+                    </v-card-text>
+                  </div>
+                </v-col>
+                <v-col class="col-12 col-sm-6 col-md-4">
+                  <div class="flex-center">
+                    <v-card-text>
+                      <div class="flex-center">
+                        <div class="circle1">
+                          <div class="circle2">
+                            <v-img src="~@/assets/img/bank.svg"></v-img>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text--disabled text-uppercase text-h5 my-2">Remates bancarios</div>
+                      <v-divider class="my-2"/>
+                      <div class="text-uppercase blue--text">Oportunidades Inmobiliarias!</div>
+                      <v-divider class="my-2"/>
+                      <div class="text-uppercase blue--text">Información sobre remates bancarios</div>
+                      <v-btn
+                          v-bind="size"
+                          rounded
+                          outlined
+                          color="blue"
+                          class="mt-6"
+                      >
+                        SABER MÁS
+                      </v-btn>
+                    </v-card-text>
+                    <v-divider style="margin-right: -23px" vertical v-if="this.$vuetify.breakpoint.smAndUp"></v-divider>
+                  </div>
+                  <v-divider class="mx-4" v-if="!this.$vuetify.breakpoint.smAndUp"></v-divider>
+                </v-col>
+                <v-col class="col-12 col-sm-6 col-md-4">
+                  <div class="flex-center">
+                    <v-card-text>
+                      <div class="flex-center">
+                        <div class="circle1">
+                          <div class="circle2">
+                            <v-img src="~@/assets/img/juridico.svg"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text--disabled text-uppercase text-h5 my-2">Cobranza y Jurídicos</div>
+                      <v-divider class="my-2"/>
+                      <div class="text-uppercase blue--text">Cobranza judicial</div>
+                      <v-divider class="my-2"/>
+                      <div class="text-uppercase blue--text">Cobranza extrajudicial</div>
+                      <v-divider class="my-2"/>
+                      <div class="text-uppercase blue--text">Asesoría juríidica</div>
+                      <v-btn
+                          v-bind="size"
+                          rounded
+                          outlined
+                          color="blue"
+                          class="mt-6"
+                      >
+                      SABER MÁS
+                      </v-btn>
+                    </v-card-text>
+                    <v-divider style="margin-right: -23px" vertical v-if="this.$vuetify.breakpoint.mdAndUp"></v-divider>
+                  </div>
+                  <v-divider class="mx-4" v-if="!this.$vuetify.breakpoint.smAndUp"></v-divider>
+                </v-col>
+               
               </v-row>
             </v-card>
           </v-col>
