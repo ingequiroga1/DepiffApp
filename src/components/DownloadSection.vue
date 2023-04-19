@@ -8,7 +8,7 @@
                 <v-img src="@/assets/img/logodepiffnew.png" class="d-block ml-auto mr-auto" max-width="350px" />
               </v-col>
               <v-col cols="12" sm="8" class="white--text text-left">
-                <h1>Despacho profecional de <br> <span style="color: #ffc107; font-size: 2.1em">INVERSIONES</span><br>financieras para el futuro</h1>
+                <h1>Despacho profesional de <br> <span style="color: #ffc107; font-size: 2.1em">INVERSIONES</span><br>financieras para el futuro</h1>
                 <p style="font-size: 18px">
                  <b>DEPIFF</b> somos un importante intermediario de seguros y servicios financieros, que con nuestra experiencia y capacidad brindamos la mejor gestión entre nuestros clientes y la Compañía y/o Institución Financiera.
                 </p>
