@@ -2,7 +2,10 @@
   <v-app>
     <section id="cabecera" style="margin-bottom: 30px;">
     <div class="text-center bgazul" style="padding-top: 5%; overflow: hidden;">
-      <h1>Seguros - Depiff</h1>
+      <v-btn text @click="enviarA">
+          <span class="mr-2">Regresar a Depiff</span>
+        </v-btn>
+      <!-- <h1 @click="enviarA">Seguros - Depiff</h1> -->
       <div class="container" style="margin-top: 50px;">
            <div class="row">
               <div class="col-md-2 conticon" style="padding-top: 20px"> 
@@ -77,6 +80,9 @@ methods: {
       console.log(id);
       this.$router.push({name:'datos',params:{id:id}})
    },
+   enviarA(){
+      this.$router.push('/')
+   }
  
 },
 components: {
@@ -89,6 +95,10 @@ components: {
 </script>
 
 <style scoped>
+
+.v-btn{
+   color: #fff;
+}
 .bgazul{
     background: #2b4689;
     color: #fff;
