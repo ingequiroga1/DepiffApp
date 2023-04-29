@@ -134,7 +134,7 @@ export default {
         {
           img: require("@/assets/img/icon2.png"),
           title: "Seguros",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          text: "",
         },
         // {
         //   img: require("@/assets/img/icon1.png"),

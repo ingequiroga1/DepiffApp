@@ -14,10 +14,10 @@
                 </h4>
                 
                 <h3 class="font-weight-light mt-3">
-                  Telefone: +xx (xx) xxxxx-xxxx
+                  Telefono: 4772735165
                 </h3>
                 <h3 class="font-weight-light">
-                  Email: email@email.com
+                  Email: hcarlosgarcia@depiff.com.mx
                 </h3>
               </v-col>
               <v-col cols="12" sm="7">
@@ -100,9 +100,14 @@
   }
   
   </style>
-  
   <script>
-  // import {db} from '@/main'
+  import emailjs from 'emailjs-com';
+
+//   const templateParams = {
+//     from_name: 'Victor',
+//     message: 'Hola Xime y Sam!',
+//     to_name: 'Victor'
+// };
   
   export default {
     data: () => ({
@@ -131,7 +136,27 @@
       }
     }),
     methods: {
-      submit() {
+
+  submit() {
+    let templateParams = {
+    from_name: this.name,
+    message: this.textArea,
+    to_name: 'Depiff Seguros',
+    email: this.email
+};
+ 
+  emailjs.send(process.env.VUE_APP_ID_USER_MAIL,'template_btginip', templateParams,process.env.VUE_APP_EMAIL_KEY)
+
+  
+  .then(() => { 
+    this.snackbar.text = "Mensaje enviado con exito"
+    this.snackbar.color = "primary"
+    this.snackbar.enabled = true
+  }, () => {
+    this.snackbar.text = "Error al enviar el correo"
+          this.snackbar.color = "danger"
+          this.snackbar.enabled = true
+        });
         /*db.collection("contactData").add({
           name: this.name,
           email: this.email,

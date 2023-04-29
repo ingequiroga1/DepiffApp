@@ -1,20 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ConstructionView from '../views/ConstructionView.vue'
 import segurosRouter from '../modules/seguros/routes'
+import RematesView from '../modules/remates/views/homeView.vue'
 
 
 Vue.use(VueRouter)
 
 const routes = [
+  // {
+  //   path: '/',
+  //   name: 'construction',
+  //   component: ConstructionView
+  // },
   {
     path: '/',
-    name: 'construction',
-    component: ConstructionView
-  },
-  {
-    path: '/home',
     name: 'home',
     component: HomeView
   },
@@ -22,7 +22,14 @@ const routes = [
     path: '/seguros',
     name: 'seguros',
     ...segurosRouter
+  },
+  {
+    path: '/remates',
+    name: 'remates',
+    component: RematesView
   }
+
+  
 ]
 
 const router = new VueRouter({
