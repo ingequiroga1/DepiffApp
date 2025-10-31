@@ -1,123 +1,25 @@
 <template>
   <section id="hero">
-    <v-parallax dark src="@/assets/img/depiffhero2.jpg" height="750">
-      <v-row align="center" justify="center">
-        <v-col cols="10">
-          <v-row align="center" justify="center">
-            <v-col cols="12" md="6" xl="8">
-              <h1 class="display-2 font-weight-bold fontblue mb-4 fazul">Depiff</h1>
-              <h3 class="font-weight-bold fazul">
-                ¡Protege lo que más importa con nuestros seguros! <br />
-                En Depiff, sabemos que tu hogar, tu automóvil y tu salud son fundamentales para tu bienestar 
-                y el de tu familia. Por eso, ofrecemos una amplia gama de opciones de seguros personalizados 
-                para garantizar que estén protegidos en caso de cualquier eventualidad.
-              </h3>
-              <v-btn
-                color="#F2921D"
-                rounded
-                tonal
-                large
-                dark
-                @click="$vuetify.goTo('#features')"
-                class="mt-5"
-              >
-                Saber mas
-                <v-icon class="ml-2">mdi-arrow-down</v-icon>
-              </v-btn>
-              <!-- <div class="video d-flex align-center py-4">
-                <a @click.stop="dialog = true" class="playBut">
-                  <svg
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-                    x="0px"
-                    y="0px"
-                    width="60px"
-                    height="60px"
-                    viewBox="0 0 213.7 213.7"
-                    enable-background="new 0 0 213.7 213.7"
-                    xml:space="preserve"
-                  >
-                    <polygon
-                      class="triangle"
-                      id="XMLID_18_"
-                      fill="none"
-                      stroke-width="7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      points="73.5,62.5 148.5,105.8 73.5,149.1 "
-                    />
+    <div class="hero-section">
+      <v-row class="hero-content" align="center" justify="center">
+        <v-col cols="10" md="6" xl="8">
+          <h1 class="display-2 font-weight-bold fontblue mb-4 fazul">Depiff</h1>
+          <h3 class="font-weight-bold fazul">
+            ¡Protege lo que más importa con nuestros seguros! <br />
+            En Depiff, sabemos que tu hogar, tu automóvil y tu salud son fundamentales para tu bienestar
+            y el de tu familia. Por eso, ofrecemos una amplia gama de opciones de seguros personalizados
+            para garantizar que estén protegidos en caso de cualquier eventualidad.
+          </h3>
+          <v-btn color="#F2921D" rounded tonal large dark @click="$vuetify.goTo('#features')" class="mt-5">
+            Saber más
+            <v-icon class="ml-2">mdi-arrow-down</v-icon>
+          </v-btn>
+        </v-col>
+      </v-row>
+    </div>
 
-                    <circle
-                      class="circle"
-                      id="XMLID_17_"
-                      fill="none"
-                      stroke-width="7"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      cx="106.8"
-                      cy="106.8"
-                      r="103.3"
-                    />
-                  </svg>
-                </a>
-                <p class="subheading ml-2 mb-0">Assista o vídeo</p>
-              </div> -->
-            </v-col>
-            <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down"> </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-      <div class="svg-border-waves text-white">
-        <v-img src="@/assets/img/borderWaves.svg" />
-      </div>
-    </v-parallax>
-    <v-container fluid id="features" class="mt-2">
-      <v-row align="center" justify="center">
-        <v-col cols="10">
-          <v-row align="center" justify="space-around">
-            <!-- <v-col cols="12" class="text-center">
-              <h1 class="font-weight-light display-2">Title</h1>
-              <h1 class="font-weight-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h1>
-            </v-col> -->
-            <v-col
-              cols="12"
-              sm="4"
-              class="text-center"
-              v-for="(feature, i) in features"
-              :key="i"
-            >
-              <v-hover v-slot:default="{ hover }">
-                <v-card
-                  class="card"
-                  shaped
-                  :elevation="hover ? 10 : 4"
-                  :class="{ up: hover }"
-                >
-                  <v-img
-                    :src="feature.img"
-                    max-width="100px"
-                    class="d-block ml-auto mr-auto"
-                    :class="{ 'zoom-efect': hover }"
-                    @click="enviarSeguros()"
-                    
-                  ></v-img>
-                  <h1 class="font-weight-regular">{{ feature.title }}</h1>
-                  <h4 class="font-weight-regular subtitle-1">
-                    {{ feature.text }}
-                  </h4>
-                </v-card>
-              </v-hover>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-container>
+
+
     <div class="svg-border-waves">
       <img src="~@/assets/img/wave2.svg" />
     </div>
@@ -177,7 +79,7 @@ export default {
     pause() {
       this.player.pauseVideo();
     },
-    enviarSeguros(){
+    enviarSeguros() {
       this.$router.push('/seguros')
     }
   },
@@ -185,9 +87,8 @@ export default {
 </script>
 
 <style lang="scss">
-
-.fontblue{
-    color: primary;
+.fontblue {
+  color: primary;
 }
 
 .circle {
@@ -222,15 +123,19 @@ export default {
         0% {
           transform: translateX(0);
         }
+
         30% {
           transform: translateX(-5px);
         }
+
         50% {
           transform: translateX(5px);
         }
+
         70% {
           transform: translateX(-2px);
         }
+
         100% {
           transform: translateX(0);
         }
@@ -262,6 +167,7 @@ export default {
 #hero {
   z-index: 0;
 }
+
 .svg-border-waves img {
   position: absolute;
   bottom: 0;
@@ -296,10 +202,36 @@ export default {
 }
 
 .fazul {
-    color: #2b4689;
-  }
+  color: #2b4689;
+}
 
 section {
   position: relative;
 }
+
+.hero-section {
+  background-image: url('@/assets/img/fondohero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: center; /* centra horizontalmente */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #2b4689;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
 </style>

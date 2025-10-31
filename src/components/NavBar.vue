@@ -13,7 +13,7 @@
             <img src="@/assets/img/logo.png" alt="Logo" />
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title class="title">Calango</v-list-item-title>
+            <v-list-item-title class="title">Depiff</v-list-item-title>
             <v-list-item-subtitle>WEB</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -49,7 +49,7 @@
       :class="{ expand: flat }"
     >
       <v-toolbar-title>
-        <v-img src="@/assets/img/logo.png" max-width="50px" />
+        <v-img src="@/assets/img/logo.png" max-width="100px" />
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon
@@ -59,18 +59,18 @@
       />
       <div v-else>
         <v-btn text @click="$vuetify.goTo('#hero')">
-          <span class="mr-2">Principal</span>
+          <span class="mr-2">Inmobiliaria</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#features')">
-          <span class="mr-2">Servicios</span>
+          <span class="mr-2">Seguros</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#download')">
-          <span class="mr-2">Quienes Somos</span>
+          <span class="mr-2">Ofertas</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#contact')">
-          <span class="mr-2">Contacto</span>
+          <span class="mr-2">Servicios</span>
         </v-btn>
-        <v-btn rounded color="#F2921D" @click="$vuetify.goTo('#pricing')">
+        <v-btn rounded color="primary" @click="$vuetify.goTo('#pricing')">
           <span class="mr-2">Cotizador</span>
         </v-btn>
       </div>
