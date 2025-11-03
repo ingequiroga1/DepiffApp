@@ -58,16 +58,16 @@
         v-if="isXs"
       />
       <div v-else>
-        <v-btn text @click="$vuetify.goTo('#hero')">
+        <v-btn text color="primary" @click="$vuetify.goTo('#hero')">
           <span class="mr-2">Inmobiliaria</span>
         </v-btn>
-        <v-btn text @click="$vuetify.goTo('#features')">
+        <v-btn text color="primary"   @click="$vuetify.goTo('#features')">
           <span class="mr-2">Seguros</span>
         </v-btn>
-        <v-btn text @click="$vuetify.goTo('#download')">
+        <v-btn text color="primary"  @click="$vuetify.goTo('#download')">
           <span class="mr-2">Ofertas</span>
         </v-btn>
-        <v-btn text @click="$vuetify.goTo('#contact')">
+        <v-btn text color="primary" @click="$vuetify.goTo('#contact')">
           <span class="mr-2">Servicios</span>
         </v-btn>
         <v-btn rounded color="primary" @click="$vuetify.goTo('#pricing')">

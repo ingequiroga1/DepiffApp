@@ -180,7 +180,7 @@ body {
     line-height: 60px;
     padding: 0 15px;
     /*color: #2d2d2d;*/
-    color: #fff;
+    color: red !important;
     font-weight: bold;
     font-size: 14px;
     text-transform: uppercase;

@@ -2,11 +2,13 @@
   <v-app>
     <NavBar :color="color" :flat="flat"/>
     <v-main class="pt-0">
+      <PanelComponent />
+      <!-- 
       <home-section/>
       <AboutSection />
       <DownloadSection />
       <PricingSection />
-      <ContactSection />
+      <ContactSection /> -->
     </v-main>
     <v-scale-transition>
       <v-btn
@@ -17,7 +19,7 @@
         fixed
         bottom
         right
-        color="secondary"
+        color="primary"
         @click="toTop"
       >
         <v-icon>mdi-arrow-up</v-icon>
@@ -38,12 +40,13 @@
 
 <script>
   import NavBar from '../components/NavBar'
-  import HomeSection from '@/components/HomeSection.vue';
-  import FooterVue from '@/components/FooterVue.vue';
-  import AboutSection from '@/components/AboutSection.vue';
-  import DownloadSection from '@/components/DownloadSection.vue';
-  import PricingSection from '@/components/PricingSection.vue';
-  import ContactSection from '@/components/ContactSection.vue';
+  // import HomeSection from '@/components/HomeSection.vue';
+  // import FooterVue from '@/components/FooterVue.vue';
+  // import AboutSection from '@/components/AboutSection.vue';
+  // import DownloadSection from '@/components/DownloadSection.vue';
+  // import PricingSection from '@/components/PricingSection.vue';
+  // import ContactSection from '@/components/ContactSection.vue';
+import PanelComponent from '@/components/PanelComponent.vue';
 
 
   export default {
@@ -51,12 +54,13 @@
 
     components: {
       NavBar,
-      HomeSection,
-      FooterVue,
-      AboutSection,
-      DownloadSection,
-      PricingSection,
-      ContactSection
+      // HomeSection,
+      // FooterVue,
+      // AboutSection,
+      // DownloadSection,
+      // PricingSection,
+      // ContactSection,
+      PanelComponent
 
     },
 
