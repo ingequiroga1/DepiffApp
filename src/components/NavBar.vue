@@ -1,20 +1,14 @@
 <template>
   <div>
-    <v-navigation-drawer
-      v-model="drawer"
-      app
-      temporary
-      dark
-      src="@/assets/img/bgDrawer.jpg"
-    >
+    <v-navigation-drawer v-model="drawer" app temporary  src="@/assets/img/bgDrawer.jpg">
       <v-list>
         <v-list-item>
           <v-list-item-avatar>
-            <img src="@/assets/img/logo.png" alt="Logo" />
+            <img src="@/assets/img/logodp.png" alt="Logo" />
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title class="title">Depiff</v-list-item-title>
-            <v-list-item-subtitle>WEB</v-list-item-subtitle>
+            <v-list-item-title class="title text-white">Depiff</v-list-item-title>
+            <v-list-item-subtitle class="text-white">WEB</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -22,17 +16,12 @@
       <v-divider />
 
       <v-list dense>
-        <v-list-item
-          v-for="([icon, text, link], i) in items"
-          :key="i"
-          link
-          @click="$vuetify.goTo(link)"
-        >
+        <v-list-item  v-for="([icon, text, link], i) in items" :key="i" link @click="$vuetify.goTo(link)">
           <v-list-item-icon class="justify-center">
-            <v-icon>{{ icon }}</v-icon>
+            <v-icon color="#ffffff">{{ icon }}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title class="subtitile-1">{{
+            <v-list-item-title class="subtitile-1 text-white">{{
               text
             }}</v-list-item-title>
           </v-list-item-content>
@@ -40,31 +29,22 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar
-      app
-      :color="color"
-      :flat="flat"
-      dark
-      class="px-15"
-      :class="{ expand: flat }"
-    >
+    <v-app-bar app :color="color" :flat="flat" dark class="px-15" :class="{ expand: flat }">
       <v-toolbar-title>
-        <v-img src="@/assets/img/logo.png" max-width="100px" />
+        <v-img src="@/assets/img/logodprz.png"   max-width="180"
+        height="60"
+          cover alt="Logo Depiff" />
       </v-toolbar-title>
       <v-spacer />
-      <v-app-bar-nav-icon
-        @click.stop="drawer = !drawer"
-        class="mr-4"
-        v-if="isXs"
-      />
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-4" v-if="isXs" color="primary" />
       <div v-else>
         <v-btn text color="primary" @click="$vuetify.goTo('#hero')">
           <span class="mr-2">Inmobiliaria</span>
         </v-btn>
-        <v-btn text color="primary"   @click="$vuetify.goTo('#features')">
+        <v-btn text color="primary" @click="$vuetify.goTo('#features')">
           <span class="mr-2">Seguros</span>
         </v-btn>
-        <v-btn text color="primary"  @click="$vuetify.goTo('#download')">
+        <v-btn text color="primary" @click="$vuetify.goTo('#download')">
           <span class="mr-2">Ofertas</span>
         </v-btn>
         <v-btn text color="primary" @click="$vuetify.goTo('#contact')">
@@ -118,7 +98,6 @@ export default {
 </script>
 
 <style scoped>
-
 .v-toolbar {
   transition: 0.6s;
 }
@@ -126,5 +105,9 @@ export default {
 .expand {
   height: 80px !important;
   padding-top: 10px;
+}
+
+.text-white{
+  color:white;
 }
 </style>

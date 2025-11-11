@@ -2,9 +2,11 @@
   <v-app>
     <NavBar :color="color" :flat="flat"/>
     <v-main class="pt-0">
-      <PanelComponent />
-      <!-- 
+     
+      
       <home-section/>
+      <!-- 
+       <PanelComponent />
       <AboutSection />
       <DownloadSection />
       <PricingSection />
@@ -40,13 +42,13 @@
 
 <script>
   import NavBar from '../components/NavBar'
-  // import HomeSection from '@/components/HomeSection.vue';
+   import HomeSection from '@/components/HomeSection.vue';
   // import FooterVue from '@/components/FooterVue.vue';
   // import AboutSection from '@/components/AboutSection.vue';
   // import DownloadSection from '@/components/DownloadSection.vue';
   // import PricingSection from '@/components/PricingSection.vue';
   // import ContactSection from '@/components/ContactSection.vue';
-import PanelComponent from '@/components/PanelComponent.vue';
+//import PanelComponent from '@/components/PanelComponent.vue';
 
 
   export default {
@@ -54,13 +56,13 @@ import PanelComponent from '@/components/PanelComponent.vue';
 
     components: {
       NavBar,
-      // HomeSection,
+       HomeSection,
       // FooterVue,
       // AboutSection,
       // DownloadSection,
       // PricingSection,
       // ContactSection,
-      PanelComponent
+      //PanelComponent
 
     },
 
