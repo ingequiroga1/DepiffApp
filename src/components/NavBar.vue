@@ -38,20 +38,20 @@
       <v-spacer />
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-4" v-if="isXs" color="primary" />
       <div v-else>
-        <v-btn text color="primary" @click="$vuetify.goTo('#hero')">
-          <span class="mr-2">Inmobiliaria</span>
+        <v-btn text @click="$vuetify.goTo('#hero')">
+          <span class="mr-2 text-white">Inmobiliaria</span>
         </v-btn>
-        <v-btn text color="primary" @click="$vuetify.goTo('#features')">
-          <span class="mr-2">Seguros</span>
+        <v-btn text @click="$vuetify.goTo('#features')">
+          <span class="mr-2 text-white">Seguros</span>
         </v-btn>
-        <v-btn text color="primary" @click="$vuetify.goTo('#download')">
-          <span class="mr-2">Ofertas</span>
+        <v-btn text @click="$vuetify.goTo('#download')">
+          <span class="mr-2 text-white">Ofertas</span>
         </v-btn>
         <v-btn text color="primary" @click="$vuetify.goTo('#contact')">
-          <span class="mr-2">Servicios</span>
+          <span class="mr-2 text-white">Servicios</span>
         </v-btn>
         <v-btn rounded color="primary" @click="$vuetify.goTo('#pricing')">
-          <span class="mr-2">Cotizador</span>
+          <span class="mr-2 text-white">Cotiza ahora</span>
         </v-btn>
       </div>
     </v-app-bar>
@@ -107,7 +107,5 @@ export default {
   padding-top: 10px;
 }
 
-.text-white{
-  color:white;
-}
+
 </style>

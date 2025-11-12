@@ -3,16 +3,15 @@
     <div class="hero-section">
       <v-row class="hero-content" align="center" justify="center">
         <v-col cols="10" md="6" xl="8">
-          <h1 class="display-2 font-weight-bold fontblue mb-4 fazul">Depiff</h1>
-          <h3 class="font-weight-bold fazul">
-            ¡Protege lo que más importa con nuestros seguros! <br />
-            En Depiff, sabemos que tu hogar, tu automóvil y tu salud son fundamentales para tu bienestar
-            y el de tu familia. Por eso, ofrecemos una amplia gama de opciones de seguros personalizados
-            para garantizar que estén protegidos en caso de cualquier eventualidad.
+          <h2 class="main-text font-weight-bold  mb-4 text-white">Protegemos lo que <br> más valoras: tu <br> hogar, tu inversión <br> y tu tranquilidad </h2>
+          <h3 class="text-white">
+            Expertos en soluciones inmobiliarias y de seguros <br>personalizados.
           </h3>
-          <v-btn color="#F2921D" rounded tonal large dark @click="$vuetify.goTo('#features')" class="mt-5">
-            Saber más
-            <v-icon class="ml-2">mdi-arrow-down</v-icon>
+          <v-btn color="primary" rounded tonal large dark @click="$vuetify.goTo('#features')" class="mt-5">
+            Ver propiedades
+          </v-btn>
+           <v-btn color="#ffffff" rounded tonal large  @click="$vuetify.goTo('#features')" class="mt-5 mx-4">
+            Cotizar seguro
           </v-btn>
         </v-col>
       </v-row>
@@ -20,9 +19,9 @@
 
 
 
-    <div class="svg-border-waves">
+    <!-- <div class="svg-border-waves">
       <img src="~@/assets/img/wave2.svg" />
-    </div>
+    </div> -->
   </section>
 </template>
 
@@ -87,9 +86,7 @@ export default {
 </script>
 
 <style lang="scss">
-.fontblue {
-  color: primary;
-}
+
 
 .circle {
   stroke: white;
@@ -210,28 +207,52 @@ section {
 }
 
 .hero-section {
-  background-image: url('@/assets/img/fondohero.jpg');
+  background-image: url('@/assets/img/fondohero2.png');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   height: 100vh;
   position: relative;
   display: flex;
-  align-items: center; /* centra verticalmente */
-  justify-content: center; /* centra horizontalmente */
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    background-attachment: scroll; 
+    background-position: center top; 
+  }
+
+  @media (max-width: 768px) {
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: 60% center; 
+    height: 100vh; 
+    padding: 3rem 1rem;
+    text-align: center;
+
+    .hero-content {
+      text-align: center;
+
+      .v-btn {
+        display: block;
+        margin: 0.5rem auto;
+      }
+    }
+  }
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: #2b4689;
-}
 
-.hero-section::before {
+/* .hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0.2);
+} */
+
+.main-text{
+  font-size: 3rem !important;
+    line-height: 3.125rem;
+    letter-spacing: normal !important;
 }
 
 </style>
