@@ -5,8 +5,8 @@
      
       
       <home-section/>
-      <!-- 
-       <PanelComponent />
+      
+       <!-- <PanelComponent />
       <AboutSection />
       <DownloadSection />
       <PricingSection />
@@ -43,12 +43,12 @@
 <script>
   import NavBar from '../components/NavBar'
    import HomeSection from '@/components/HomeSection.vue';
-  // import FooterVue from '@/components/FooterVue.vue';
-  // import AboutSection from '@/components/AboutSection.vue';
-  // import DownloadSection from '@/components/DownloadSection.vue';
-  // import PricingSection from '@/components/PricingSection.vue';
-  // import ContactSection from '@/components/ContactSection.vue';
-//import PanelComponent from '@/components/PanelComponent.vue';
+//    import FooterVue from '@/components/FooterVue.vue';
+//    import AboutSection from '@/components/AboutSection.vue';
+//    import DownloadSection from '@/components/DownloadSection.vue';
+//    import PricingSection from '@/components/PricingSection.vue';
+//    import ContactSection from '@/components/ContactSection.vue';
+// import PanelComponent from '@/components/PanelComponent.vue';
 
 
   export default {
@@ -57,12 +57,12 @@
     components: {
       NavBar,
        HomeSection,
-      // FooterVue,
-      // AboutSection,
-      // DownloadSection,
-      // PricingSection,
-      // ContactSection,
-      //PanelComponent
+      //  FooterVue,
+      //  AboutSection,
+      //  DownloadSection,
+      //  PricingSection,
+      //  ContactSection,
+      // PanelComponent
 
     },
 

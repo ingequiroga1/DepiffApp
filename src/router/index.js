@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import segurosRouter from '../modules/seguros/routes'
 import RematesView from '../modules/remates/views/homeView.vue'
+import ServiciosView from '../modules/servicios/views/serviciosView.vue'
 
 
 Vue.use(VueRouter)
@@ -27,6 +28,11 @@ const routes = [
     path: '/remates',
     name: 'remates',
     component: RematesView
+  },
+   {
+    path: '/servicios',
+    name: 'servicios',
+    component: ServiciosView
   }
 
   

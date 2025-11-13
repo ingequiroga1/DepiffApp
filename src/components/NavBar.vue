@@ -31,23 +31,26 @@
 
     <v-app-bar app :color="color" :flat="flat" dark class="px-15" :class="{ expand: flat }">
       <v-toolbar-title>
-        <v-img src="@/assets/img/logodprz.png"   max-width="180"
+        <a href="/">
+          <v-img src="@/assets/img/logodprz.png" to="/"   max-width="180"
         height="60"
           cover alt="Logo Depiff" />
+        </a>
+        
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="mr-4" v-if="isXs" color="primary" />
       <div v-else>
-        <v-btn text @click="$vuetify.goTo('#hero')">
+        <v-btn text to="/remates">
           <span class="mr-2 text-white">Inmobiliaria</span>
         </v-btn>
-        <v-btn text @click="$vuetify.goTo('#features')">
+        <v-btn text to="/seguros">
           <span class="mr-2 text-white">Seguros</span>
         </v-btn>
         <v-btn text @click="$vuetify.goTo('#download')">
           <span class="mr-2 text-white">Ofertas</span>
         </v-btn>
-        <v-btn text color="primary" @click="$vuetify.goTo('#contact')">
+        <v-btn text color="primary" to="/servicios">
           <span class="mr-2 text-white">Servicios</span>
         </v-btn>
         <v-btn rounded color="primary" @click="$vuetify.goTo('#pricing')">
